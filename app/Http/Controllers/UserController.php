@@ -10,6 +10,7 @@ class UserController extends Controller
     {
         return $this->show();
     }
+    
     private function show()
     {
         return 'hello world';   
