@@ -1,14 +1,22 @@
 <?php
 
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\UserController;
 use GuzzleHttp\Middleware;
 use Illuminate\Support\Facades\Route;
 
-
+################# Products-Start ####################
 Route::get('/products',[ProductController::class,'index']);
-
 Route::get('/products/{id}',[ProductController::class,'show']);
+################# Products-End ####################
+
+################# Category-Start ####################
+Route::get('categories',[CategoryController::class,'index']);
+Route::get('categories/{id}',[CategoryController::class,'show']);
+################# Category-end ####################
+
+
 
 Route::group(['middleware' => ['auth']], function () {
 

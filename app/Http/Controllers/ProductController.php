@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Product;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class ProductController extends Controller
@@ -10,7 +11,9 @@ class ProductController extends Controller
     public function index()
     {
         //array of products
-       return Product::get();
+       return $products = Product::get();
+
+        return view('dashboard.product.index', compact('products'));
     }
     public function create()
     {
