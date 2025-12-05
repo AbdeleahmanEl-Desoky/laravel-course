@@ -8,11 +8,8 @@ class UserController extends Controller
 {
     public function index()
     {
-        return $this->show();
+        
+ 
     }
     
-    private function show()
-    {
-        return 'hello world';   
-    }
 }
