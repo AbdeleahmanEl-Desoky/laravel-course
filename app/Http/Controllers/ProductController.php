@@ -10,10 +10,7 @@ class ProductController extends Controller
 {
     public function index()
     {
-        //array of products
-       return $products = Product::get();
 
-        return view('dashboard.product.index', compact('products'));
     }
     public function create()
     {
@@ -21,18 +18,11 @@ class ProductController extends Controller
     }
     public function store(Request $request)
     {
-        //create product
-        Product::create([
-            'name' => $request->name,
-            'description' => $request->description,
-            'price' => $request->price,
-        ]);
+
     }
     public function show($id)
     {
-        // show single product
-        // Product::findOrFail($id);
-     return   Product::find($id);
+
     }
     public function edit($id)
     {
@@ -40,20 +30,10 @@ class ProductController extends Controller
     }
     public function update(Request $request, $id)
     {
-        //  update product
-        $product = Product::find($id);
-        
-        $product->update([
-            'name' => $request->name,
-            'description' => $request->description,
-            'price' => $request->price,
-        ]);
+
     }
     public function destroy($id)
     {
-        // delete product
-        $product = Product::find($id);
-        $product->delete();
         
     }
 }
