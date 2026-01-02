@@ -1,7 +1,7 @@
 @extends('layouts.admin.app')
 
 @section('title')
-Abdu
+admin
 @endsection
 
 @section('content')

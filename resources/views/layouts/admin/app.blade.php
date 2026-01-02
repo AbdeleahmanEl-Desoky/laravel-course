@@ -1,10 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>
-       @yield('title', 'Admin Dashboard')
-    </title>
-
     @include('admin.include.meta')
     @include('admin.include.head')
   </head>
